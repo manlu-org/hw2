@@ -1,0 +1,30 @@
+# mysql connect configuration
+mysql:
+  username: root
+  path: '127.0.0.1:3306'
+  db-name: 'hw2'
+  config: 'charset=utf8&parseTime=True&loc=Local'
+  max-idle-conns: 10
+  max-open-conns: 10
+  log-mode: true
+
+#sqlite 配置
+sqlite:
+  path: hw2.db
+  log-mode: true
+  config: 'loc=Asia/Shanghai'
+
+# system configuration
+system:
+  use-multipoint: false
+  env: 'public'  # Change to "develop" to skip authentication for development mode
+  addr: 8080
+  db-type: "mysql"
+  https: false
+
+# logger configuration
+log:
+  prefix: '[HW2]'
+  log-file: true
+  stdout: 'DEBUG'
+  file: 'DEBUG'
