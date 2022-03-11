@@ -11,6 +11,9 @@ func DBTables() {
 	err := db.Set("gorm:table_options", "ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;").
 		AutoMigrate(
 			&models.Tag{},
+			&models.Post{},
+			&models.Reply{},
+			&models.PostTag{},
 		)
 	if err != nil {
 		global.LOG.Debug(err)
